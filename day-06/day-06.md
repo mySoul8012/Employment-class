@@ -467,7 +467,6 @@ public static void show(int[] arr , String str){
 ```
 以下定义正确
 
-# 题目25
 
 
 
