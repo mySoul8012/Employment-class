@@ -13,15 +13,13 @@ public class Test01 {
             }
         }.start();
 
-        new Runnable(){
-            @Override
-            public void run() {
-                int sum = 0;
-                for(int i = 0; i < 500; i++){
-                    sum += i;
-                }
-                System.out.println(sum);
-            }
-        }.run();
+
+        Thread thread = new Thread(new  Runnable() {
+                    @Override
+                    public void run() {
+                        System.out.println("333");
+                    }
+                }, "ming");
+        thread.start();
     }
 }
