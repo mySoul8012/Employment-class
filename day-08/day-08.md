@@ -92,3 +92,35 @@ AtomicInteger 是基于硬件的原子性操作，操作为原子性的，基于
 AtomicIntegerArray 是 AtomicInteger 的数组表示
 
 # 题目12
+请说出并发安全的List集合、Set集合、Map集合分别使用什么类？
+List Vector 线程同步，线程安全
+Set集合 通过ConcurrentHashMap 构建线程安全的Set集合
+Map集合 HashTable 线程安全，SynchronizedMap 线程安全, ConcurrentHashMap线程安全
+
+# 题目13
+根据你的理解，请说出CountDownLatch类的作用。
+让一个线程，等待另外一个线程执行完毕之后，再往下执行。
+通过调用await，让其他线程等待。
+其中有两个成员方法，一个成员方法为 await 让该线程等待另外一个线程执行完毕以后，再往下执行。
+countDown 线程计数器 -1
+await 直到线程计数器为0的时候，才会执行。线程计数器才会结束。
+
+# 题目14
+根据你的理解，请说出CyclicBarrier类的作用
+CyclicBarrier让一组线程到达一个点，然后开始统计执行。
+
+# 题目15
+根据你的理解，请说出Semaphore类的作用
+控制线程的并发数量
+其构造方法为最多允许的并发线程数量。
+成员方法为 acquire 获取线程运行的许可。
+成员方法为 release 归还线程运行的许可。
+
+# 题目17
+根据你的理解，请说出Exchanger类的作用
+线程之间数据交换器，用于参数传递给其他线程，同时接受其他线程传回的数据
+
+# 题目18
+Exchanger 类 为线程交换类，用于对两个线程进行数据交换的。
+参数传递给其他线程，用于接受其他线程传回的数据
+
