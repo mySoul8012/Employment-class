@@ -4,34 +4,37 @@ import java.io.File;
 
 public class Demo2 {
     public static void main(String[] args){
-        long lenth = getLength(new File("C://Users"));
+        long lenth = getLength(new File("C:\\Users\\Administrator\\Pictures"));
         // 打印出大小
         System.out.println(lenth);
     }
 
-    public static long getLength(File file){
+    // 递归调用大小
+    private static long getLength(File file) {
+        // 获取长度
         long lenth = 0;
-        // 递归计算文件夹中的所有文件，及其子文件的大小
-        // 首先判断文件是否存在
-        if(file.exists() && file != null){
-            // 如果文件存在，并且传入的不为空，进行递归计算总大小
-            // 判断文件夹是否存在  如果传入的是文件夹，进行递归调用
+        // 进行递归获取长度
+        // 首先判断是否为空 文件是否存在
+        if(file != null && file.exists()){
+            // 如果文件不为空，再判断是不是文件夹
             if(file.isDirectory()){
+                // 如果是文件夹，获取文件列表
                 File[] files = file.listFiles();
-                // 判断获取的文件列表是否为空
-                if(files != null){
+                // 判断文件夹files是否为空
+                if(files == null){
                     return lenth;
                 }
+                // 如果不为空，进行循环调用
                 for(File file1:files){
-                    // 递归调用方法
+                    // 进行循环调用
                     lenth += getLength(file1);
                 }
             }else{
-                // 如果不是文件夹，进行计算
+                // 如果文件夹不为空，进行计算长度
                 lenth += file.length();
             }
         }
-        // 返回lneth
+        // 返回长度
         return lenth;
     }
 }
