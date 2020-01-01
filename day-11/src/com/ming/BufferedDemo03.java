@@ -32,6 +32,5 @@ public class BufferedDemo03 {
         }
         // 关闭缓冲
         bufferedReader.close();
-
     }
 }
