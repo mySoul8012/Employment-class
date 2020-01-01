@@ -11,13 +11,6 @@ public class Test03 {
     public static void main(String[] args) throws IOException {
         Properties properties = new Properties();
         properties.load(new FileReader("C:\\ming\\ming.txt"));
-        Set<String> keys = properties.stringPropertyNames();
-        // 进行循环遍历
-        Iterator<String> iterator = keys.iterator();
-        // 进行遍历
-        while(iterator.hasNext()){
-            // 进行输出
-            System.out.println((String)iterator.next());
-        }
+        System.out.println(properties);
     }
 }
