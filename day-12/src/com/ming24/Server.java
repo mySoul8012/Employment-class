@@ -4,15 +4,15 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class TestServer {
+public class Server {
     public static void main(String[] args) throws IOException {
-        // 创建服务器
-        ServerSocket serverSocket = new ServerSocket(9093);
-        // 创建线程
+        // 创建Socket Server
+        ServerSocket serverSocket = new ServerSocket(23532);
+        // 进行连接
         while(true){
             Socket socket = serverSocket.accept();
             // 创建线程
-            new Thread(new ThreadSever(socket))
+            new java.lang.Thread(new Thread(socket)).start();
         }
     }
 }
