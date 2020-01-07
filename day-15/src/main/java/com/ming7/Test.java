@@ -39,8 +39,6 @@ public class Test {
             String jiage = element.element("price").getText();
             // 进行输出
             System.out.println("书名 " + name + "出版社 " + cubanse + "日期  " + riqi + "价格 " + jiage);
-
-
         }
     }
 }
