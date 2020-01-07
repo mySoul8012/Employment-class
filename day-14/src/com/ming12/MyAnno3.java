@@ -5,8 +5,10 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target(ElementType.FIELD)
-@Retention(RetentionPolicy.SOURCE)
-public @interface MyAnno2 {
-    String type() default  "java";
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.CLASS)
+public @interface MyAnno3 {
+    String type();
+    int[] intArr();
+
 }
