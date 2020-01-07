@@ -1,0 +1,20 @@
+<books>
+    <book>
+        <name>架构师成长之路</name>
+        <cubanse>黑马程序员</cubanse>
+        <riqi>2010-6-6</riqi>
+        <price>125.00</price>
+    </book>
+    <book>
+        <name>JavaEE企业级开发</name>
+        <cubanse>黑马程序员</cubanse>
+        <riqi>2011-5-5</riqi>
+        <price>115.80</price>
+    </book>
+    <book>
+        <name>Oracle指南</name>
+        <cubanse>清华计算机</cubanse>
+        <riqi>2012-0707</riqi>
+        <price>89.00</price>
+    </book>
+</books>
