@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+<body>
+<div class="container">
+    <div class="child center">
+        <form method="get" action="#">
+            <table>
+                <tr>
+                    <td>用户名:</td>
+                    <td colspan="2">
+                        <input type="text" placeholder="请输入账号" name="username"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>密码：</td>
+                    <td colspan="2">
+                        <input type="password" placeholder="请输入密码" name="password"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>邮箱</td>
+                    <td colspan="2">
+                        <input type="email" placeholder="请输入密码" name="email"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>姓名</td>
+                    <td colspan="2">
+                        <input type="text" placeholder="请输入姓名" name="name"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>手机号</td>
+                    <td colspan="2">
+                        <input type="text" placeholder="请输入手机号码" name="phone"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>性别:</td>
+                    <td>
+                        <input type="radio" name="sex" value="male"/>男
+                    </td>
+                    <td>
+                        <input type="radio" name="sex" value="female"/>女
+                    </td>
+                </tr>
+                <tr>
+                    <td>出生日期:</td>
+                    <td colspan="2">
+                        <input type="date" name="birthday"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>验证码: </td>
+                    <td>
+                        <input type="text" placeholder="请输入验证码" name="userCode"/>
+                    </td>
+                    <td>
+                        <img src="./img/checkcode.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center">
+                        <input type="submit" value="用户注册" class="btn"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+</body>
+</html>

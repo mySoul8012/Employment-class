@@ -1,0 +1,61 @@
+body {
+    background-color: beige; /*背景颜色*/
+}
+
+.container {
+    box-sizing: content-box; /*默认的 content 作为盒子大小*/
+    width: 800px; /*宽度*/
+    height: 500px; /*高度*/
+    border: 10px ridge lightgray; /*边框 10px 桥梁 浅灰色*/
+    margin: 50px auto; /*外边距 上下50px 左右自动居中*/
+    background-color: white; /*背景颜色*/
+}
+
+.child {
+    border: 1px solid red; /*边框 1px 实线 红色*/
+    box-sizing: border-box; /*边框作为盒子大小*/
+    height: 500px; /*高度*/
+    border-color: rgba(0, 0, 0, 0); /*边框颜色 完全透明*/
+}
+
+.center {
+    margin: 0px auto; /*外边距 上下0px 左右自动居中*/
+    width: 400px; /*宽度*/
+    font-family: '楷体'; /*字体类型*/
+    color: gray; /*字体颜色*/
+}
+
+.center table tr {
+    height: 50px; /*高度*/
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="email"]{
+    border: 1px solid lightgray; /*边框 1px 实线 浅灰色*/
+    width: 180px; /*宽度*/
+    height: 30px; /*高度*/
+    border-radius: 15px; /*边框圆角*/
+    padding: 5px; /*填充*/
+    box-sizing: border-box; /*边框作为盒子大小*/
+}
+
+input[name="userCode"] {
+    width: 60px; /*宽度*/
+}
+
+input[name="userCode"] + img {
+    vertical-align: top; /*垂直对齐方式 上对齐*/
+}
+
+.btn {
+    width: 100px; /*宽度*/
+    line-height: 30px; /*行高*/
+    background-color: gold; /*背景金色*/
+    color: white; /*字体白色*/
+    border: 1px solid gold; /*边框 1px 实线 金色*/
+    border-radius: 5px; /*边框圆角*/
+}
+
+input:focus { /*输入框获取焦点时*/
+    outline: none; /*获取焦点时不显示轮廓*/
+    border: 1px solid lightskyblue; /*边框 1px 实线 浅天蓝色*/
+}
