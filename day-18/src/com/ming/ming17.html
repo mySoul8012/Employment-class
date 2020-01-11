@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- 第一种绑定方式，正常绑定 -->
+<input type="button" value="点我你试试" onclick="dianji()">
+<!-- 第二种绑定方式，匿名函数 -->
+<img src="../img/1.png" width="300px" height="300px">
+
+<script type="text/javascript">
+    // 点击函数
+    function dianji() {
+        alert("按钮点了");
+    }
+    // 创建匿名函数
+    let imgObj = document.querySelector("img");
+    // 添加匿名事件
+    imgObj.onclick = () => {
+        alert("图片被点了");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    // 数组创建
+    let arr1 = ["java", "python", "php", "ios"];
+    // 进行输出
+    console.log(arr1);
+    // 数组进行添加
+    arr1[4] = "java";
+    // 进行输出
+    console.log(arr1);
+
+    // js 数组元素是任意的
+    let arr2 = [10,3.14, "java", true];
+    // 进行输出
+    console.log(arr2);
+
+    // 数组中的各种函数
+    let arr3 = [1,2,3];
+    let arr4 = [4,5,6];
+    // 合并数组
+    let arr34 = arr3.concat(arr4);
+    // 输出
+    console.log(arr34);
+    // 添加首尾
+    arr34.unshift(99);
+    // 进行输出
+    console.log(arr34);
+    // 进行添加元素
+    arr34.push(99999);
+    // 添加数组
+    console.log(arr34);
+    // 删除首尾
+    arr34.shift();
+    console.log(arr34);
+    arr34.pop();
+    console.log(arr34);
+    // 进行连接
+    let str = arr34.join("-");
+    // 输出结果
+    console.log(str);
+    // 进行排序
+    arr34.sort();
+    // 进行输出
+    console.log(arr34);
+</script>
+</body>
+</html>

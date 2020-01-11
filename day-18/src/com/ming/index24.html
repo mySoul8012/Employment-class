@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    // 创建日期
+    let now = new Date();
+    // 输出
+    console.log(now);
+    // 创建日期函数
+    let year = now.getFullYear();
+    // 输出结果
+    console.log(year);
+    // 获取月
+    let month = now.getMonth() + 1;
+    month = new String(month).padStart(2, "0");
+    // 输出结果
+    console.log(month);
+
+    // 创建日期
+    let date = now.getDate();
+    // 输出结果
+    console.log(date);
+    // 创建小时
+    let hour = now.getHours();
+    // 输出结果
+    console.log(hour);
+
+    // 获取分钟
+    let minute = now.getMinutes();
+    // 进行输出
+    console.log(minute);
+
+    // 获取second
+    let second = now.getSeconds();
+    // 进行输出
+    console.log(second);
+
+    let millisecond = now.getMilliseconds();
+
+    // 进行格式化日期
+    let dataString = `${year}年${month}月${date}日  ${hour}:${minute}:${second} ${millisecond}`;
+    // 输出结果
+    console.log(dataString);
+</script>
+</body>
+</html>

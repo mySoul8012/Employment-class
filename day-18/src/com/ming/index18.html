@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="../../com/ming/img/1.png" width="50%"/>
+用户名： <input type="text" id="input01"/>
+密码： <input type="text" id="iput02"/>
+学历
+<select name="xueli">
+    <option value="01">幼儿园</option>
+    <option value="02">初中</option>
+    <option value="03">大学</option>
+    <option value="04">博士</option>
+</select>
+<script type="text/javascript">
+    // 页面加载完毕事件
+    window.onload = () => {
+        // 通过代码获取img标签对象
+        let imgObj = document.querySelector("img");
+        console.log(imgObj);
+        // 获取用户名
+        let userNameObj = document.querySelector("#input01");
+        // 绑定获取焦点事件
+        userNameObj.onfocus = () => {
+            alert("用户输入框，获取焦点了")
+        }
+        // 绑定失去焦点
+        userNameObj.onblur = () => {
+            // 失去焦点
+            alert("用户输入框，失去焦点了");
+        }
+        // 获取下拉框
+        let selectObj = document.querySelector("select");
+        // 绑定值。改变事件
+        selectObj.onchange = () => {
+            alert("下拉的值发生了改变")
+        }
+        // 根据img标签对象。绑定鼠标的移入和移出事件
+        imgObj.onmouseover = () => {
+            alert("鼠标移入了")
+        }
+        // 鼠标移出
+        imgObj.onmouseout = () => {
+            alert("鼠标移出了");
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    // js中函数没有重载，只有覆盖
+    function fun1() {
+        console.log("第一次fun1");
+    }
+
+    // 第二次fun1
+    function fun1(a) {
+        console.log("第二次fun1....." + a);
+    }
+    // 进行调用
+    fun1(10);
+    fun1();
+    fun1(20,20);
+</script>
+</body>
+</html>
