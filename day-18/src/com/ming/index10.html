@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="../ming/img/1.png">
+<script type="text/javascript">
+    let number = 1;
+    // 创建函数
+    function changePic() {
+        // 进行判断
+        if(number > 3){
+            // 进行更改操作
+            number = 1;
+        }
+        // 获取对象
+        let obj = document.querySelector("img");
+        // 获取img对象的src属性
+        console.log(obj.src);
+        // 进行更改操作
+        obj.src = "../ming/img/" + number + ".png";
+        // 进行++操作
+        number++;
+    }
+    // 创建定时器
+    setInterval(changePic, 1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 编写函数，返回随机颜色
+    function randomColor() {
+        // 获取随机颜色
+        let color = Math.round(Math.random() * 0xffffff).toString(16);
+        // 输出color
+        console.log(color);
+        // 返回结果
+        return color;
+    }
+    // 编写函数更换背景
+    function changeBeijin() {
+        let color = randomColor();
+        // 获取背景颜色
+        let body = document.querySelector("body");
+        // 设置背景颜色
+        body.bgColor = color;
+    }
+
+    // 进行每秒切换
+    setInterval(changeBeijin, 1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 编写函数，返回随机颜色值
+    function randomColor() {
+        // 返回随机颜色值
+        while(true) {
+            let color = Math.round(Math.random() * 0xffffff).toString(16);
+            // 输出随机颜色
+            console.log(color);
+            // 进行打印
+            alert(color);
+        }
+    }
+    randomColor();
+</script>
+</body>
+</html>

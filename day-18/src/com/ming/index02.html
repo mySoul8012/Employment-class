@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    let i = 0;
+    while(i < 5){
+        console.log(i);
+        i++;
+    }
+    /*dowhile循环*/
+    console.log("---------");
+    let j = 0;
+    do{
+        console.log(j);
+    }while(j < 5);
+    // 进行for循环
+    console.log("-------");
+    // 进行输出
+    for(let k = 0; k < 5; k++){
+        console.log(k);
+    }
+    // 进行打印
+    console.log("-----以上三种循环与Java一模一样--------");
+    // 创建数组
+    let arr = ["jack", "rose", "tom"];
+    // 进行遍历
+    for(let a in arr){
+        // 进行输出
+        console.log(a);
+        console.log(arr[a]);
+    }
+    console.log("---------");
+    // 创建对象
+    let obj = {name: "李四", age: 18, height: 171.3};
+    // 进行输出
+    for(let key in obj){
+        console.log(key);
+        console.log(obj[key]);
+    }
+    console.log("--------------");
+    // 进行元素循环
+    for(let b  of arr){
+        // 进行输出
+        console.log(b);
+    }
+</script>
+</body>
+</html>

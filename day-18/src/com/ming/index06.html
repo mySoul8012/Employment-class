@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="">
+<script type="text/javascript">
+    // 定义变量
+    let number = 1;
+    // 定义函数修改图片
+    function changePic() {
+        // 进行判断
+        if(number == 6){
+            number = 1;
+        }
+        // 获取img标签对象
+        let imgObj = document.querySelector("img");
+        // 修改src
+        imgObj.src = "../img/" + number + ".png";
+        // 进行++
+        number++;
+        // 输出结果
+        console.log(imgObj.src)
+    }
+
+    setInterval(changePic, 1000);
+</script>
+
+</body>
+</html>
