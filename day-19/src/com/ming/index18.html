@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" method="get">
+    姓名<input type="text" name="userName" id="userName" value="邱少云"/><br/>
+    <script type="text/javascript">
+        // 操作属性
+        let userNameObj = document.querySelector("#userName");
+        // 进行输出
+        console.log(userNameObj.value);
+        // 进行复制
+        userNameObj.value = "小小";
+        // 进行输出
+        console.log(userNameObj.type);
+        userNameObj.type = "password";
+
+        // 操作元素自定义属性
+        console.log("------------");
+        userNameObj.setAttribute("data", "我是一个文本框");
+        console.log(userNameObj.getAttribute("data"));
+        userNameObj.setAttribute("data", "我还是一个文本框");
+        console.log(userNameObj.getAttribute("data"));
+        userNameObj.removeAttribute("data");
+        console.log(userNameObj.getAttribute("data"));
+    </script>
+</form>
+</body>
+</html>

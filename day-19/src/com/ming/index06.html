@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="点我获取当前地址" onclick="huoqu()">
+<input type="button" value="点我刷新当前地址" onclick="shuaxin()">
+<input type="button" value="点我跳转到新地址" onclick="tiaozhuang()">
+<script type="text/javascript">
+    function houqu() {
+        console.log(location.href);
+    }
+    // 刷新
+    function shuaxin() {
+        location.reload();
+    }
+    // 跳转
+    function tiaozuang() {
+        location.href = "http://www.itheima.com";
+    }
+</script>
+</body>
+</html>

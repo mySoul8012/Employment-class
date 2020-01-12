@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    // 页面加载完毕事件
+    window.onload = () => {
+        let userNameObj = document.querySelectorAll("#userName");
+        console.log(userNameObj);
+        let radioObjs = document.querySelectorAll(".radio");
+        for(let radioObj of radioObjs){
+            console.log(radioObj);
+        }
+        let optionObjs = document.querySelectorAll("option");
+        // 进行循环
+        for (let optionObjsKey in optionObjs) {
+            console.log(optionObjsKey);
+        }
+        // 属性选择器
+        let checkBoxObjs = document.querySelectorAll("input[type='checkbox']");
+        // 进行输出
+        for (let checkBoxObjsKey in checkBoxObjs) {
+            console.log(checkBoxObjsKey);
+        }
+        console.log("-------");
+        let objs = document.querySelectorAll(".radio, option");
+        // 进行循环
+        for (let objsKey in objs) {
+            console.log(objsKey);
+        }
+    }
+</script>
+</body>
+</html>

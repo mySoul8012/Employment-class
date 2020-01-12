@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    // 页面加载完毕事件
+    window.onload = () => {
+        // 页面加载完毕后获取，才能保证所有标签都能获取到
+        let userNameObj = document.querySelector("#userName");
+        console.log(userNameObj);
+        let radioObjs = document.querySelectorAll(".radio");
+        for (let radioObjsKey in radioObjs) {
+            console.log(radioObjsKey);
+        }
+        // 标签选择器
+        let optionObjs = document.querySelectorAll("option");   // 标签选择器
+        for (let optionObjsKey in optionObjs) {
+            console.log(optionObjsKey);
+        }
+        // 属性选择器
+        let checkBoxObjs = document.querySelectorAll("input[type='checkbox']"); // 属性选择器
+
+    }
+</script>
+<form action="#" method="get">
+    姓名 <input type="text" name="userName" id="userName" value="邱少云"/> <br/>
+    密码 <input type="password" name="userPass"> <br/>
+    生日 <input type="date" name="userBirth"><br/>
+    性别 <input type="radio" name="gender" value="male" class="radio" checked="checked">男&emsp;
+    <input type="radio" name="gender" value="female" class="radio"/>女<br/>
+    爱好 <input type="checkbox" name="hobby" value="smoke">抽烟
+    <input type="checkbox" name="hobby" value="drink" checked>喝酒
+    <input type="checkbox" name="hobby" value="perm" checked="true">烫头<br/>
+    头像 <input type="file" name="userPic"><br/>
+    学历<select name="userEdu">
+    <option value="0">请选择</option>
+    <option value="1">入门</option>
+    <option value="2" selected>精通</option>
+    <option value="3">放弃</option>
+</select><br/>
+    简介 <textarea name="userIntro" cols="30" rows="10">
+                再次输入您的简介
+            </textarea><br/>
+
+    <input type="reset" value="清空按钮"/>
+    <input type="submit" value="提交按钮"/><br/>
+    <input type="button" value="普通按钮">
+</form>
+</body>
+</html>

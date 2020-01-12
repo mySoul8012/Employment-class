@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style type="text/css" rel="stylesheet">
+            /*偶数行*/
+            .even{
+                background-color: red;
+                /*font-size: 30px;*/
+                color: green;
+            }
+            /*奇数行*/
+            .odd{
+                background-color: blue;
+                /*font-size: 40px;*/
+                color: pink;
+            }
+            /*鼠标移入*/
+            .over{
+                background-color: yellow;
+                /*font-size: 50px;*/
+                color: green;
+            }
+        </style>
+    </head>
+<body>
+<table id="tab1" border="1" width="800" align="center">
+    <tr>
+        <th width="100px"><input type="checkbox">全/<input type="checkbox">反选</th>
+        <th>分类ID</th>
+        <th>分类名称</th>
+        <th>分类描述</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td>1</td>
+        <td>手机数码</td>
+        <td>手机数码类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td>2</td>
+        <td>电脑办公</td>
+        <td>电脑办公类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td>3</td>
+        <td>鞋靴箱包</td>
+        <td>鞋靴箱包类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td>4</td>
+        <td>家居饰品</td>
+        <td>家居饰品类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td>5</td>
+        <td>牛奶制品</td>
+        <td>牛奶制品类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td>6</td>
+        <td>大豆制品</td>
+        <td>大豆制品类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td>7</td>
+        <td>海参制品</td>
+        <td>海参制品类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td>8</td>
+        <td>羊绒制品</td>
+        <td>羊绒制品类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td>9</td>
+        <td>海洋产品</td>
+        <td>海洋产品类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td>10</td>
+        <td>奢侈用品</td>
+        <td>奢侈用品类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td>4</td>
+        <td>家居饰品</td>
+        <td>家居饰品类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td>4</td>
+        <td>家居饰品</td>
+        <td>家居饰品类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td>4</td>
+        <td>家居饰品</td>
+        <td>家居饰品类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td>10</td>
+        <td>奢侈用品</td>
+        <td>奢侈用品类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td>4</td>
+        <td>家居饰品</td>
+        <td>家居饰品类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td>4</td>
+        <td>家居饰品</td>
+        <td>家居饰品类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="checkbox"></td>
+        <td>4</td>
+        <td>家居饰品</td>
+        <td>家居饰品类商品</td>
+        <td><a href="">修改</a>|<a href="">删除</a></td>
+    </tr>
+</table>
+<script type="text/javascript">
+    // 定义变量记录原来的类名
+    let oldClassName;
+    // 加载事件
+    window.onload = () => {
+        // 进行加载事件
+        // 获取所有的行
+        let tr = document.querySelectorAll("tr");
+        // 对所有行进行遍历
+        for(let i = 0; i < tr.length; i++){
+            // 进行遍历操作
+            // 获取对应的对象
+            let obj = tr[i];
+            // 绑定移入，移出函数
+            obj.onmouseover = function () {
+                // 获取原来类名
+                oldClassName = obj.className;
+                // 进行赋值操作
+                obj.className = "over";
+            }
+
+            obj.onmouseout = () => {
+                // 恢复原形
+                obj.className = oldClassName;
+            }
+
+            // 进行赋值
+            if(i % 2 == 0){
+                obj.className = "odd";
+            }else{
+                obj.className = "even";
+            }
+        }
+    }
+</script>
+</body>
+</html>

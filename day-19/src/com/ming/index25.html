@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#">
+    <table width="600" height="350px">
+        <tr>
+            <td colspan="3"><font color="#3164af">会员注册</font> USER REGISTER</td>
+        </tr>
+        <tr>
+            <td align="right">用户名</td>
+            <td colspan="2"><input id="loginnameId" type="text" name="loginname" size="60"/></td>
+        </tr>
+        <tr>
+            <td align="right">密码</td>
+            <td colspan="2"><input id="loginpwdId" type="password" name="loginpwd" size="60"/></td>
+        </tr>
+        <tr>
+            <td align="right">确认密码</td>
+            <td colspan="2"><input id="reloginpwdId" type="password" name="reloginpwd" size="60"/></td>
+        </tr>
+        <tr>
+            <td align="right">Email</td>
+            <td colspan="2"><input id="emailId" type="text" name="email" size="60"/></td>
+        </tr>
+        <tr>
+            <td align="right">姓名</td>
+            <td colspan="2"><input name="text" name="username" size="60"/></td>
+        </tr>
+        <tr>
+            <td align="right">性别</td>
+            <td colspan="2"><input type="radio" name="gender" value="男" checked="checked"/>男 <input type="radio"
+                                                                                                    name="gender"
+                                                                                                    value="女"/>女
+            </td>
+        </tr>
+        <tr>
+            <td align="right">电话号码</td>
+            <td colspan="2"><input type="text" name="phone" size="60"/></td>
+        </tr>
+        <tr>
+            <td align="right">所在地</td>
+            <td colspan="3">
+                <select id="provinceId" style="width:150px" onchange="gaibian()">
+                    <option value="">----请-选-择-省----</option>
+                </select>
+                <select id="cityId" style="width:150px">
+                    <option value="">----请-选-择-市----</option>
+                </select></td>
+        </tr>
+        <tr>
+            <td width="80" align="right">验证码</td>
+            <td width="100"><input type="text" name="verifyCode"/></td>
+            <td><img src="../img/checkMa.png"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2"><input type="submit" value="注册"/></td>
+        </tr>
+    </table>
+</form>
+<script type="text/javascript">
+    //准备省市数据
+    let provinceData = ["北京","河北","辽宁"];
+    //准备省对应的市数据
+    let cityData = { "北京":["顺义区","昌平区","朝阳区"], "河北":["保定","石家庄","廊坊"], "辽宁":["沈阳","铁岭","抚顺"]};
+    /*先设置省数据*/
+    //1.获取省标签
+    let provinceObj = document.querySelector("#provinceId");
+    //2.遍历数组
+    for(let pro of provinceData){
+        provinceObj.innerHTML += `<option value="${pro}">${pro}</option>`;
+    }
+
+    /*省改变事件函数*/
+    function gaibian() {
+        //1.获取改变后的省
+        console.log(provinceObj.value);
+        let province = provinceObj.value;
+        //2.获取省对应的市
+        let cities = cityData[province];
+        //3.获取市标签
+        let cityObj = document.querySelector("#cityId");
+        //3.5.清空市的所有option
+        cityObj.innerHTML = '<option value="">----请-选-择-市----</option>';
+        //4.遍历
+        for (let city of cities) {
+            cityObj.innerHTML += `<option value="${city}">${city}</option>`;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="d1" style="background-color: red">我是d1</div>
+<div id="d2">我是d2</div>
+<div id="d3">我是d3</div>
+<script type="text/javascript">
+    // 操作标签的内容
+    let div1 = document.querySelector("#d1");
+    // 进行输出
+    console.log(div1.innerText);
+    // 进行输出
+    div1.innerText = "<h1>新的内容</h1>";
+    // innerHTML
+    console.log(div1.innerHTML);
+    div1.innerHTML = "<h1>新的内容</h1>";
+
+    console.log(div1.outerHTML);
+    div1.outerHTML = "<h1>新的内容</h1>";
+</script>
+</body>
+</html>

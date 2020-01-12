@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="container">
+    <div id="div1">
+        <input id="smoke" type="checkbox" name="hobby" value="抽烟"><label>抽烟&emsp;</label>
+
+    </div>
+</div>
+<script type="text/javascript">
+    let divObj = document.querySelector("#container");
+    // 进行输出
+    console.log(divObj.innerHTML);
+    // 进行赋值
+    divObj.innerHTML += '<input id="drink" type="checkbox" name="hobby" value="喝酒"><label>喝酒&emsp;</label>';
+    divObj.innerHTML += '<input id="perm" type="checkbox" name="hobby" value="烫头">';
+    // 使用面相对象的方式
+    let inputObj = document.createElement("input");
+    // 进行赋值
+    inputObj.innerHTML = "打麻将&emsp";
+
+    // 使用面相对象的方式
+    let inputObj1 = document.createElement("input");
+    inputObj1.id = "majiang";
+    inputObj1.type = "checkbox";
+    inputObj1.name = "hobby";
+    inputObj1.value = "麻将";
+    // 进行添加
+    divObj.appendChild(inputObj);
+    divObj.appendChild(inputObj1);
+
+    // 使用outerHtml删除标签
+    let div1Obj = document.querySelector("#div1");
+    div1Obj.outerHTML = "";
+</script>
+</body>
+</html>

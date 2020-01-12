@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="bth1" onclick="quan()">1 反选</button>
+<button id="bth2" onclick="fan()">2 反选</button>
+<button id="bth3" onclick="bu()">3 全不选</button>
+<input type="checkbox">电脑
+<input type="checkbox">手机
+<input type="checkbox"> 汽车
+<input type="checkbox">别墅
+<input type="checkbox" checked="checked">笔记本
+<script type="text/javascript">
+    // 全选函数
+    function quan() {
+        // 获取所有多选框标签
+        let duoxuang = document.querySelectorAll("input");
+        // 进行遍历
+        for (let duoxuangKey in duoxuang) {
+            // 进行遍历
+            duoxuang.checked = true;
+        }
+
+
+    }
+
+    // 反选函数
+    function fan() {
+        // 获取所有多选框标签
+        let checkBoxObjs = document.querySelectorAll("input[type='checkbox']");
+        // 进行遍历
+        for (let checkBoxObjsKey in checkBoxObjs) {
+            checkBoxObjsKey.checked = !checkBoxObjsKey.checked;
+        }
+
+    }
+
+    // 全不选函数
+    function bu() {
+        // 获取所有多选框标签
+        let checkBoxObjs = document.querySelectorAll("input[type='checkbox']");
+        // 进行遍历
+        for (let checkBoxObjsKey in checkBoxObjs) {
+            // 进行反
+            checkBoxObjsKey.checked = !checkBoxObjsKey.checked;
+        }
+
+    }
+</script>
+</body>
+</html>

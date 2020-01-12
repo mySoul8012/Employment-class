@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="p1">1. 设置一个css样式</p>
+<p id="p2">2. 批量设置css样式</p>
+<p id="p3" class="mp">3. 通过class设置样式</p>
+<p id="p4" class="mmp">4. 切换class样式</p>
+<script type="text/javascript">
+    // 操作单个样式，标签对象，style，样式名
+    let p1Obj = document.querySelector("#p1");
+    console.log(p1Obj);
+    p1Obj.style.fontSize = "50px";
+    p1Obj.style.color = "red";
+    p1Obj.style.fontWeight = "bold";
+    p1Obj.style.fontStyle = "italic";
+    // 批量操作样式
+    let p2Obj = document.querySelector("#p2");
+    console.log(p2Obj);
+    p2Obj.style.cssText = "font-size:60px;color:blue;font-weight:bold; font-style:itclic";
+    // 通过修改标签的类名，切换标签的样式
+    let p3Obj = document.querySelector("#p3");
+    console.log(p3Obj);
+    p3Obj.className += " mmp";
+    // 获取标签的所有类型
+    let p4Obj = document.querySelector("#p4");
+    let p4ClassList = p4Obj.classList;
+    p4ClassList.add("mp");
+    p4ClassList.add("mmp");
+    console.log(p4ClassList.contains("mp"));
+    p4ClassList.toggle("mmp");
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    function task() {
+        console.log(new Date());
+    }
+    // 定义周期定时器
+    let intervalID = window.setInterval(task, 1000);
+    // 定义一次性定时器
+    let timeoutID = window.setTimeout(task, 4000);
+    // 定义两个取消函数
+    function quxiao1() {
+        window.clearInterval(intervalID);
+    }
+    function quxiao2() {
+        window.clearTimeout(timeoutID);
+    }
+</script>
+</body>
+</html>
