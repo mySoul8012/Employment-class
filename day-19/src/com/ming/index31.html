@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table id="table" border="1px" style="border-color: green">
+<tr><td>学号</td><td>姓名</td><td>删除</td></tr>
+</table>
+<form action="#" onsubmit="return tianjiao();">
+    学号:<input type="text" value="" name="学号" id="xhao"/>
+    姓名：<input type="text" value="" name="姓名" id="name"/>
+    <input type="submit" value="提交"/>
+</form>
+<script type="text/javascript">
+    function tianjiao() {
+        // 获取table表格参数
+        let table = document.querySelector("#table");
+        // 获取学号
+        let xhao = document.querySelector("#xhao").value;
+        let name = document.querySelector("#name").value;
+        // 生成表单元素
+        let tmp = `<tr><td>${xhao}</td><td>${name}</td><td><a href="javascript:void(0);" onclick="deleteRow(this)"> 删除</a></td></tr>`;
+        // 进行赋值
+        table.innerHTML += tmp;
+        // 表单数据清空
+        document.querySelector("#xhao").value = "";
+        document.querySelector("#name").value = "";
+        // 输出tmp
+        console.log(tmp);
+        return false;
+    }
+
+    function deleteRow(row) {
+        // 获取父标签
+        let currentTrl = row.parentNode.parentNode;
+        // 再次获取父标签
+        let table = currentTrl.parentNode;
+        // 删除table标签
+        table.removeChild(currentTrl);
+    }
+</script>
+</body>
+</html>

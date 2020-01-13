@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" onsubmit="return tijiao()">
+    行&nbsp;<input type="text" name="row" value="" id="row"/>
+    列&nbsp;<input type="text" name="column" value="" id="column"/>
+    <input type="submit" value="提交"/>
+</form>
+<table id="table" border="1px" style="border-color: blue">
+</table>
+<script type="text/javascript">
+    // 获取表单值
+    let row = null;
+    let column = null;
+    // 表单提交函数
+    function tijiao() {
+        // 清空原先的值
+        let table = document.querySelector("#table");
+        // 清空表格
+        table.innerHTML = "";
+
+        row = document.querySelector("#row").value;
+        column = document.querySelector("#column").value;
+        // 清空值
+        document.querySelector("#row").value = "";
+        document.querySelector("#column").value = "";
+        // 保存原有的表格
+        let tmp = "";
+        // 生成表格
+        for(let i = 0; i < row; i++){
+            // 进行添加行
+            tmp += "<tr>";
+            // 生成列
+            for(let j = 0; j < column; j++){
+                // 添加列
+                tmp += "<td>小小</td>";
+            }
+            tmp += "</tr>";
+        }
+        // 进行打印
+        // 进行赋值操作
+        table.innerHTML = tmp;
+
+        return false;
+    }
+</script>
+</body>
+</html>
