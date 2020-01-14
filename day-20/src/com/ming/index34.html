@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<!-- 编写搜索框 -->
+<input type="text" name="soushuo" id="soushuo" value=""  onkeyup="searchWorkd(this)"/>
+<input type="button" name="button" id="button" value="搜索"/>
+<div id="show"></div>
+<script type="text/javascript">
+    function searchWorkd(object){
+
+        // 发送ajax
+        $.ajax({
+            // 发送ajax
+            type: "get",
+            url: "data/data.txt",
+            dataType: "json",
+            // 进行同步
+            async: true,
+            // 成功函数
+            success: (data) => {
+                console.log(data);
+                // 进行清空
+                $("#show").empty();
+                // 进行隐藏
+                $("#show").slideUp();
+                // 进行回调函数
+               // 创建提示符
+                let flag = false;
+                // 进行遍历
+                // 获取搜索框的数值
+                let string = $("#soushuo").val();
+                // 进行遍历
+                for(let tmp of data){
+                    // 进行判断
+                    if(tmp.startsWith(string)){
+                        // 如果有相同的，添加到div中
+                        $("#show").append("<div>" +  tmp +"</div>");
+                        // 设置为true
+                        flag = true;
+                    }
+                }
+                // 进行显示
+                if(flag){
+                    // 进行显示
+                    $("#show").slideDown();
+                }else{
+                    $("#show").slideUp();
+                }
+            },
+            error: () => {
+                console.log("错误");
+            }
+        })
+    }
+
+</script>
+</body>
+</html>
