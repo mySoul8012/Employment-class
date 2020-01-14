@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<form action="#" onsubmit="return panduan()">
+    请输入城市: <input type="text" value="南京" id="city"/>
+    <p>城市复选框</p>
+    <input name="beijin" type="checkbox" id="beijin" value="北京">北京<br/>
+    <input type="checkbox" name="nanjin" id="nanjin" value="南京">南京<br/>
+    <input type="checkbox" name="shanhai" id="shanhai" value="上海">上海<br/>
+    <!-- 进行判断 -->
+    <input type="submit" value="判断" id="submit"/>
+</form>
+<script type="text/javascript">
+    function panduan() {
+        // 获取城市
+        let city = $("#city").val();
+        // 获取全部标签，进行清空
+        let checkbox = $("[type='checkbox']");
+        // 进行遍历
+        for(let checkboxvalue of checkbox){
+            // 进行遍历
+            $(checkboxvalue).prop("checked", "");
+        }
+        // 进行判断
+        switch (city) {
+            case "北京":
+                $("#beijin").prop("checked", "checked");
+                break;
+            case "南京":
+                $("#nanjin").prop("checked", "checked");
+                break;
+            case "上海":
+                $("#shanhai").prop("checked", "checked");
+                break;
+        }
+        return false;
+    }
+</script>
+</body>
+</html>

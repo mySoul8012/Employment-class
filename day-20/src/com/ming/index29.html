@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jQuery/jquery-3.3.1.min.js"></script>
+    <style type="text/css">
+        .div{
+            width: 300px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<input type="button" name="显示" value="显示" id="xianshi" />
+<br/>
+<div id="div" class="div"></div>
+<script type="text/javascript">
+    // 获取按钮元素
+    let button = $("#xianshi");
+    // 获取div元素
+    let div = $("#div");
+    // 绑定按钮事件
+    $(() => {
+        button.click(
+            () => {
+                div.toggleClass("div");
+            }
+        )
+    });
+    // 添加鼠标事件
+    $(() => {
+        div.mouseout(
+            () => {
+                // 鼠标移入，隐藏div
+                div.hide();
+            }
+        )
+    })
+
+    $(() => {
+        div.mouseover(
+            () => {
+                // 鼠标移出，显示div
+                div.show();
+            }
+        )
+    })
+</script>
+</body>
+</html>

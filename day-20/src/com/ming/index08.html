@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    $(() => {
+        // 属性选择器
+        console.log(3333);
+        let $nameObjs = $("[name]");
+        console.log($nameObjs);
+        // 获取name属性
+        let $nameObjs1 = $("input[name]");
+        // 输出结果
+        console.log($nameObjs1);
+        // 获取对象
+        let $nameObjs2 = $("input[name='userName']");
+        // 输出结果
+        console.log($nameObjs2.length);
+    })
+</script>
+<label for="userName">姓名</label>
+<input id="userName" type="text" name="userName" value="超级管理员">
+<label>密码</label>
+<input type="password" name="userPass" value="123456"/>
+<br/>
+</body>
+</html>

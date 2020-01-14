@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    $(() => {
+        // 获取单个样式
+        console.log($("#p1").css("background-color"));
+        $("#p1").css("background-color", "blue");
+        // 批量样式
+        $("#p2").css({"color": "yellow", "font-size": "50px", "background-color": "blank"});
+        // 进行类名操作
+        $("#p3").addClass("mp");
+        $("#p3").removeClass("mpp");
+        $("#p4").toggleClass("mp");
+        $("#p4").toggleClass("mp");
+    })
+</script>
+</body>
+</html>

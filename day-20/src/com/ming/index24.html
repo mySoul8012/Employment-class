@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jQuery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        // 进行加载
+        $(function () {
+            // 前面添加幼稚园选项
+            let $optionObj = $("<option value='0'>幼稚园</option>");
+            // 进行添加标签
+            $("#userEdu").prepend($optionObj);
+            // 后面添加大学选项
+            let $optionObj1 = $("<option value='4'>大学</option>");
+            $("#userEdu").append($optionObj1);
+            // 移除所有选项
+            $("#userEdu").empty();
+            // 删除下拉列表
+            $("#userEdu").remove();
+
+        })
+    </script>
+</head>
+<body>
+<form action="#" method="get">
+    学历
+    <select name="userEdu" id="userEdu">
+        <option value="1">小学</option>
+        <option value="2">初中</option>
+        <option value="3">高中</option>
+    </select>
+</form>
+</body>
+</html>

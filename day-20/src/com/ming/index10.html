@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    $(() => {
+        console.log($("span").text());
+        console.log($("span").html());
+        $("span").text("<h2>花国山</h2>");
+        $("span").html("<h2>花果山</h2>");
+        // 获取div
+        console.log($("div").text());
+        console.log($("div").html());
+        $("div").text("<h2>水帘洞</h2>");
+        $("div").html("<h2>水帘洞</h2>");
+    })
+</script>
+<span>花果山</span>
+<div><h1>水帘洞</h1></div>
+</body>
+</html>

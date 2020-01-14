@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    $(() => {
+        // 获取对象
+        // 获取对象 val
+        console.log($("input[type='password']").val());
+        // 进行复制
+        $("#userName").val("超级管理员");
+        // 获取值
+        console.log("value=" + $("#userEdu").val());
+        console.log("value=" + $("userEdu").val(1));
+
+        // 获取对象，prop
+        $("#male").prop("checked", "checked");
+        // 进行输出
+        $("input[type='checkbox']").prop("checked", "checked");
+        // 进行输出对象
+        $("input[type='file']").attr("data", "12222232");
+        // 进行输出
+        console.log($("input[type='file']").attr("data"));
+    })
+</script>
+<form action="#" method="get">
+    <input type="text" name="userId" value="007" hidden="hidden" id="userId"/><br/>
+    姓名<input type="text" name="userName" value="管理员" id="userName" data-msg="哈哈哈"/> <br/>
+    密码<input type="password" name="userPass" value="123" disabled id="userPass"/><br/>
+    生日<input type="date" name="userBirth" disabled="disabled" id="userBirth"/><br/>
+    性别<input type="radio" name="gender" value="male" id="male"/>男&emsp;
+    <input type="radio" name="gender" value="female" id="female"/>女<br/>
+    爱好<input type="checkbox" name="hobby" value="smoke" id="smoke"/>
+    <label for="smoke">抽烟&emsp;</label>
+    <input type="checkbox" name="hobby" value="drink" id="drink"/>
+    <label for="drink">喝酒&emsp;</label>
+    <input type="checkbox" name="hobby" value="perm"  id="perm"/>
+    <label for="perm">烫头&emsp;</label><br/>
+    头像<input type="file" name="userPic"/><br/>
+    学历<select name="userEdu" id="userEdu">
+    <option value="">-请选择-</option>
+    <option value="1">小学</option>
+    <option value="2" selected>初中</option>
+    <option value="3">高中</option>
+</select>
+</form>
+</body>
+</html>

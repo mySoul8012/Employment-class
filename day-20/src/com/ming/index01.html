@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jQuery/jquery-3.3.1.min.js"/>
+    <script type="text/javascript">
+        // 完整的ajax
+        function doAjax() {
+            $.ajax({
+                type: "get",
+                url: "../../data/data.txt",
+                dataType: "json",
+                async: true,
+                success: (data) => {
+                    console.log("请求成功");
+                    for(let key in data){
+                        console.log(key + "...." + data[key]);
+                    }
+                },
+                error: function (err) {
+                    console.log("请求失败 " + err);
+                }
+            })
+        }
+        function doAjax02() {
+            $.ajax({
+                type: "get",
+                url: "../../data/data.txt",
+                dataType: "json",
+                async: true,
+                success: function (data) {
+                    console.log("请求成功");
+                    for(let d of data){
+                        console.log(d);
+                    }
+                },
+                error: function (err) {
+                    console.log("请求失败 " + err);
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

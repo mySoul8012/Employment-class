@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    function doAjax() {
+        // 使用原生js发送ajax
+        let http = new XMLHttpRequest();
+        // 绑定引擎状态改变事件
+        http.onreadystatechange = () => {
+            // 进行判断
+            if(http.readyState == 4 && http.status == 200){
+                // 获取文本
+                let res = http.responseText;
+                // 输出结果
+                console.log("res=" + res );
+            }
+        }
+        // 绑定请求地址和请求发送方式
+        http.open("get", "data/demo20.txt", true);
+        // 发送请求
+        http.send();
+    }
+</script>
+<img src="img/1.png" onclick="doAjax()" width="30%">
+</body>
+</html>

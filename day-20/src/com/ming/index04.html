@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div></div>
+<script type="text/javascript">
+    // 页面加载事件
+    $(function () {
+        // 获取div-JQuery
+        let $divObj = $("div");
+        console.log($divObj.text());
+        console.log($divObj.html());
+        // 获取div-js
+        let divObj = document.querySelector("div");
+        console.log(divObj.innerText);
+        console.log(divObj.innerHTML);
+        // js对象和jquery对象的转换
+        console.log($divObj);
+        console.log(divObj);
+        // jquery->js
+        let divObj1 = $divObj[0];
+        console.log(divObj1);
+        // js -> jquery
+        let $divObj1 = $(divObj);
+        console.log(divObj1);
+        console.log($divObj1);
+    })
+</script>
+</body>
+</html>

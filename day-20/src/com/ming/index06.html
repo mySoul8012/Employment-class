@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    // jQuery选择器
+    $(function () {
+        // 标签选择器
+        let $spanObjs = $("span");
+        console.log($spanObjs.text());
+        // 类选择器
+        let $spanFemales = $(".female");
+        // 进行输出
+        console.log($spanFemales.text());
+        // id 选择器
+        let $spanObj = $("#main");
+        // 输出
+        console.log($spanObj.text());
+    })
+</script>
+<span class="female">古力娜扎</span>
+<span class="female">迪丽热巴</span>
+<span class="female">新垣结衣</span>
+<span class="female">岛琦结衣</span>
+<span class="female hero">郭俊卿</span>
+<span class="male hero">杨思根</span>
+<span class="male hero">黄继光</span>
+<span class="hero">郑成功</span>
+<span id="main">主城</span>
+<span id="east">东港</span>
+</body>
+</html>

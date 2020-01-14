@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    // 页面加载事件
+    $(() => {
+        // 并列选择器
+        let $allObjs = $("#gbl, .jjx");
+        console.log($allObjs);
+        // 后代选择器
+        let $divspanObj = $("div span");
+        // 进行打印
+        console.log($divspanObj);
+    })
+</script>
+<div>
+    <span>烟雾弹</span>
+    <p>
+        <span id="gb1">高爆雷</span>
+    </p>
+    <p class="jjx">急救箱</p>
+    <span id="cld">催泪弹</span>
+</div>
+</body>
+</html>

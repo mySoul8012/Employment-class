@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jQuery/jquery-3.3.1.min.js"></script>
+    <style type="text/css">
+        .div{
+            border-color: red;
+            font-family: 楷体;
+        }
+    </style>
+</head>
+<body>
+<div class="div" id="div">
+    <div>小小:小小</div>
+</div>
+<input type="text" id="text" value=""/><br/>
+<textarea id="textContent" rows="10" id="textarea" cols="15"></textarea>
+<input type="button" id="button" value="评论" name="评论"/>
+<script type="text/javascript">
+   let button = $("#button");
+    // 绑定事件
+    $(() => {
+        // 进行事件绑定
+        button.click(() => {
+            // 进行绑定
+            // 获取昵称
+            let name = $("#text").val();
+            let textContent = $("#textContent").val();
+            // 输出结果
+            // 获取div
+            let $div = $("#div");
+            // 创建临时元素
+            let $tmp = `<div>${name}:&nbsp;${textContent}</div>`;
+            // 进行元素添加
+            $div.append($tmp);
+            // 清空内容
+            $("#text").val("");
+            $("#textContent").val("");
+
+        })
+    })
+</script>
+</body>
+</html>

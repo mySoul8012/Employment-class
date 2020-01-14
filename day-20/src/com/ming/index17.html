@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    function offevent() {
+        alert("段落3");
+    }
+
+    $(function () {
+        // 事件名
+        $("#p1").click(() => {
+            // 进行输出
+            alert("段落1被点击了");
+        })
+        // 进行 on
+        $("#p2").on("click", () => {
+            // 进行输出
+            alert("段落2222....");
+        })
+        $("#p3").on("click", () => {
+            // 进行输出
+            alert("段落3333");
+        })
+        // 进行事件名
+        $("#p3").off("click");
+        // 进行输出事件
+        $("#p1").click();
+    })
+</script>
+<p id="p1">我是段落1</p>
+<p id="p2">我是段落2</p>
+<p id="p3">我是段落3解绑定事件</p>
+</body>
+</html>

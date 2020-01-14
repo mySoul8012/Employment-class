@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    // 页面加载
+    $(() => {
+        // 获取li标签
+        let $lis = $("li");
+        // 获取对象 each
+        $lis.each((i, e) => {
+            console.log(i);
+            console.log(e);
+            console.log(e.innerText);
+            console.log(e.innerHTML);
+            console.log($(e).text());
+        })
+        console.log("-----------------");
+        // 获取each对象
+        $.each($lis, (i, e) => {
+            console.log(i);
+            console.log(e);
+            console.log(e.innerText);
+            console.log($(e).text());
+        })
+        console.log("----------------");
+        // 进行each遍历
+        $lis.each((i, e) => {
+            console.log(i);
+            console.log(e);
+            console.log(e.innerText);
+            console.log(e.innerHTML);
+            console.log($(e).text());
+            console.log($(e).html());
+        })
+        // fori遍历
+        console.log("--------");
+        for(let i = 0; i < $lis.length; i++){
+            // 进行遍历
+            let liObj = $lis[i];
+            console.log(liObj.innerText);
+            console.log(liObj.innerText);
+            console.log($(liObj).text());
+            console.log($(liObj).html());
+        }
+
+    })
+</script>
+<ul id="city">
+    <li>北京</li>
+    <li>上海</li>
+    <li>天津</li>
+    <li>重庆</li>
+</ul>
+</body>
+</html>

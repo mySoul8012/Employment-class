@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div class="content">
+    <input type="text" name="word" onkeyup="searchWorld(this)">
+    <input type="button" value="搜索一下"/>
+    <div class="show" id="show"/>
+</div>
+<script type="text/javascript">
+    function searchWorld(obj) {
+        // 发送ajax 得到结果，找出以obj.value开头的字符串
+        $.ajax({
+            type:"get",
+            url: "data/data.txt",
+            dataType: "json",
+            async: true,
+            success: (data)=> {
+                console.log(data);
+                // 进行清空
+                $("#show").empty();
+                // 进行隐藏
+                $("show").slideUp();
+                // 标记是否找到
+                let b = false;
+                // 进行循环判断
+                for(let key of data){
+                    // 进行判断开头
+                    if(key.startsWith(obj.value)){
+                        // 进行添加头部
+                        $("#show").append($("<div>" + key + "</div>"));
+                        b = true;
+                    }
+                }
+                // 进行判断
+                if(b){
+                    // 显示
+                    $("#show").slideDown();
+
+                }else{
+                    $("#show").slideUp();
+                }
+            },
+            error: (data) => {
+                console.log("请求失败");
+            }
+        })
+    }
+</script>
+</body>
+</html>

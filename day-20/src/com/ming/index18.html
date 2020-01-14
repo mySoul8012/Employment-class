@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jQuery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(() => {
+            // 页面加载完成
+            alert("页面ok了1111");
+        })
+        $(() => {
+            alert("页面ok了1111");
+        })
+        // blur 失去焦点
+        $(() => {
+            $("#userName").blur(() => {
+                // 失去焦点
+                alert("输入框失去焦点");
+            })
+        })
+        // change 表单控件value值改变
+        $(() => {
+            $("#userEdu").change(() => {
+                alert("下拉框改变了..." + this.value);
+            })
+        })
+        // 鼠标移入移出
+        $(() => {
+            $("#city").mouseover(() => {
+                // 进行输出
+                $(this).css("backgroundColor", "yellow");
+            })
+
+            $("#city").mouseout(() => {
+                // 进行输出
+                $(this).css("backgroundColor", "pink");
+            })
+            // 创建移出
+            $("#imgID").hover(
+                function () {
+                    $(this).fadeTo(2000, 0.1);
+                }
+                function f() {
+                    $(this).fadeTo(2000, 1.0);
+                }
+            )
+        })
+        // click单击
+        $(() => {
+            $('#btn').click(() => {
+                alert("我点");
+            })
+        })
+    </script>
+</head>
+<body>
+<h1 id="h1">我是大标题</h1>
+姓名<input type="text" name="userName" id="userName"/><br/>
+学历
+<select name="userEdu" id="userEdu">
+    <option value="1">小学</option>
+    <option value="2">初中</option>
+    <option value="3">高中</option>
+</select>
+<ul id="city" style="background-color: green">
+    <li>北京</li>
+    <li>上海</li>
+    <li>天津</li>
+    <li>重庆</li>
+</ul>
+<img src="../img/11.png" width="20%" id="imgID">
+<input  type="button" id="btn" value="点击按钮"></input>
+</body>
+</html>

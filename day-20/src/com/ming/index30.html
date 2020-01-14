@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<input type="button" value="请仔细阅读协议(5)" name="请仔细阅读协议" id="button" disabled="disabled"/>
+<script type="text/javascript">
+    // 获取元素
+    let button = $("#button");
+    let k = 5;
+    // 绑定事件
+    $(
+            () => {
+                // 创建定时器,每隔1秒执行一次
+               let time =  setInterval(
+                    () => {
+                        // 进行执行
+                        k--;
+                        // 进行判断
+                        if(k > 0){
+                            // 进行自减少
+                            button.val("请仔细阅读本协议(" + k + ")");
+                        }else{
+                            // 倒计时结束
+                            button.prop("disabled", false);
+                            // 修改按钮内容
+                            button.val("请仔细阅读本协议");
+                            // 销毁定时器
+                            clearInterval(time);
+                        }
+                    }, 1000
+                )
+            }
+    );
+
+    // 添加点击事件
+    $(() => {
+        // 添加事件
+        button.click(
+            () => {
+                // 弹窗
+                alert("弹窗");
+            }
+        )
+    })
+</script>
+</body>
+</html>
