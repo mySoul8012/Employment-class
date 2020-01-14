@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+行：<input id="row" type="text" />
+列：<input id="col" type="text" />
+<input type="button" value="生成表格" onclick="createTable()"/>
+<div id="divId"></div>
+<script>
+    function createTable() {
+        let rows = document.querySelector("#row").value;
+        let cols = document.querySelector("#col").value;
+        let div = document.querySelector("#divId");
+        let tab = `<table border="1" bordercolor="blue" cellspacing="0">`
+        for(let i = 0; i < rows; i++){
+            tab += "<tr>";
+            for(let j = 0; j < cols; j++){
+                tab += "<td>传智播客</td>";
+            }
+            tab += "</tr>";
+        }
+        tab += "</table>";
+        div.innerHTML = tab;
+    }
+</script>
+</body>
+</html>
