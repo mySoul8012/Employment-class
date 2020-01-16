@@ -3,7 +3,6 @@ package com.ming;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.nio.channels.SocketChannel;
 
 public class MyTomcat03 {
     // 创建资源目录
