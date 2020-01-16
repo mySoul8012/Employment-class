@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 引入 jquery -->
+    <script src="../../jQuery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<input type="text" onkeyup="tijiao(this)" id="inputClass"/>
+<input type="button" id="button" name="提交" value="提交"/>
+<div id="div"></div>
+<script>
+    // 创建ajax
+    function tijiao(object) {
+        // 获取div的值
+        let button = $("#inputClass").val();
+        console.log(button);
+        // 发送ajax
+        $.ajax({
+            type: "get",
+            url: "data/data.txt",
+            dataType: "json",
+            // 进行同步
+            async: true,
+            // 函数
+            success: (data) => {
+                // 显示框清空
+                $("#div").empty();
+                // 进行遍历
+                let flage = false;
+                // 进行遍历
+                for(let tmp of data){
+                    // 进行判断
+                    if(tmp.startsWith(button)){
+                        // 进行添加
+                        $("#div").append(`<div>${tmp}</div>`);
+                        console.log()
+                        // 设置为true
+                        flage = true;
+                    }
+                }
+                // 进行判断
+                if(flage){
+                    // 进行判断，显示
+                    $("#div").slideDown();
+                }else{
+                    $("#div").slideUp();
+                }
+
+            },
+            error: (data) => {
+                console.log("输出错误");
+            }
+        })
+    }
+</script>
+</body>
+</html>
