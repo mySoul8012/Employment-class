@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    $(() => {
+        // 获取div-JQuery
+        let $divObj = $("div");
+        console.log($divObj.text());
+        console.log($divObj.html());
+        // 获取div-js
+        let divObj = document.querySelector("div");
+        console.log(divObj.innerHTML);
+        console.log(divObj.innerText);
+        // js对象和jquery对象转换
+        console.log($divObj);
+        console.log(divObj);
+        // jquery -> js 对象
+        let divObj1 = $divObj[0];
+        // js -> jquery
+        let $divObj1 = $(divObj);
+        console.log($divObj1);
+        console.log($divObj1);
+        // jquery选择器
+        $(() => {
+            let $spanObjs = $("span");
+            console.log($spanObjs.text());
+            // 类选择器
+            let $spanFeamles = $(".female");
+            console.log($spanFeamles.text());
+            // id 选择器
+            let $spanObj = $("#main");
+            console.log($spanObj.text());
+
+        })
+    })
+</script>
+</body>
+</html>

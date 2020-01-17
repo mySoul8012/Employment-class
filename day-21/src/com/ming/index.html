@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jQuery/jquery-1.11.3.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    // 进行页面加载
+    $(() => {
+        // 获取li标签
+        let $lis = $("li");
+        // 获取对象
+        $lis.each((i, e) => {
+            console.log(i);
+            console.log(e);
+        })
+    })
+</script>
+</body>
+</html>

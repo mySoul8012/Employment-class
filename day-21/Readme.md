@@ -7,6 +7,7 @@ D.直接部署在bin文件夹下面;
 
 答案： A，B,C
 
+
 # 题目2
 2.(单选)在Tomcat服务器的webapps文件夹下部署了名称为aaa的web项目,项目根目录下有一个test.html文件,服务器启动后(端口不曾被修改)，正确访问test.html文件的方式是()
 A. localhost:8080/webapps/aaa/test.html
