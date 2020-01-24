@@ -115,3 +115,13 @@ destory何时调用
 # 题目10
 描述ServletContext生命周期
 servlet容器在启动一个web应用时都会创建一个ServletContext对象，一个Web应用只有一个ServletContext对象，web应用下的所有servlet共享一个servletCOntext对象，通过这个ServletContext 对象访问此servlet容器内的各种资源。
+
+# 题目11
+(多选)请求信息分为以下哪几个部分()
+A.请求行
+B.请求头
+C.响应头
+D.请求体
+答案： ABD
+
+# 题目12
