@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+</head>
+<body>
+<!-- 下拉列表搜索 -->
+<div>
+    <input type="text" name="world" width="300px" onkeyup="soushuo(this)">
+    <input type="button" name="button">
+    <div class="show" id="show"></div>
+</div>
+<script type="text/javascript">
+    // 进行搜索
+    function soushuo(obj) {
+        // 发送ajax
+        $.ajax(
+            {
+                type: "get",
+                url: "../data/data.txt",
+                dataType: "json",
+                async: true,
+                success: function (data) {
+                    console.log(data);
+                    // 进行清空
+                    $("#show").empty();
+                    // 进行收起
+                    $("#show").slideUp();
+                    // 进行遍历
+                    let b = false;
+                    // 进行遍历
+                    for(let key of data){
+                        // 进行判断前几个字符
+                        if(key.startsWith(obj.value)){
+                            // 进行添加
+                            $("#show").append($("<div>" + key + "</div>>"));
+                            // 进行复制
+                            b = false;
+                        }
+                    }
+                    // 进行判断
+                    if(b){
+                        // 进行显示
+                        $("#show").slideDown();
+
+                    }else{
+                        // 进行隐藏
+                        $("#show").slideUp();
+                    }
+                },
+                error:function (error) {
+                  console.log(error);
+                }
+            }
+        )
+    }
+</script>
+</body>
+</html>

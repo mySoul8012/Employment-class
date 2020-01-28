@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+</head>
+<body>
+<!-- 商品全选，全不选 -->
+<input type="checkbox" value="checkbox" name="checkbox" checked="checked">商品1
+<input type="checkbox" value="checkbox" name="checkbox">商品2
+<input type="checkbox" value="checkbox" name="checkbox">商品3
+<input type="button" name="quanxuang" value="商品全选" id="quanxuang">
+<input type="button" name="quangbuxuang" value="商圈全不选" id="quangbuxuang">
+<input type="button" name="fanxuang" value="反选" id="fangxuang">
+<script type="text/javascript">
+    // 进行商品全选
+    // 进行商品全选
+    $(
+        $("#quanxuang").click(() => {
+            // 进行触发
+            // 选择全部checkbox
+            let checkbox = document.querySelectorAll("input[type='checkbox']");
+            for(let check of checkbox){
+                check.checked = true;
+            }
+        })
+    )
+
+    // 进行商品反选
+    $(
+        $("#quangbuxuang").click(() => {
+            // 进行触发，反选
+            let checkbox = $("input[type='checkbox']");
+            // 进行遍历
+            for(let i = 0; i < checkbox.length; i++){
+                checkbox[i].checked = false;
+            }
+        })
+    )
+
+    // 进行反选
+    $(
+        $("#fangxuang").click(() => {
+            // 进行反选
+            let checkbox = $("input[type='checkbox']");
+            // 进行遍历
+            for(let i = 0; i < checkbox.length; i++){
+                checkbox[i].checked = !checkbox[i].checked;
+            }
+        })
+    )
+</script>
+
+</body>
+</html>

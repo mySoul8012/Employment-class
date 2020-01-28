@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+</head>
+<body>
+<form action="#" onsubmit="return tijiao()">
+    <!-- 进行用户表单校验 -->
+    用户名：<input type="text" name="user" id="user"/>
+    密码： <input type="password" name="password" id="password"/>
+    <!-- 进行提交 -->
+    <input type="submit" value="提交"/>
+</form>
+<script type="text/javascript">
+    // 进行用户表单校验
+    function tijiao() {
+        // 进行用户表单校验
+        // 获取用户名
+        let user = $("#user").val();
+        console.log(user);
+        // 进行校验
+        if(/111/.test(user)){
+            alert("表单校验完成");
+        }else{
+            alert("表单校验失败")
+        }
+        // 获取密码
+        let password = $("#password").val();
+        // 进行校验
+        if(/111/.test(password)){
+            alert("表单校验失败");
+        }else{
+            alert("表单校验成功")
+        }
+        return false;
+    }
+</script>
+</body>
+</html>

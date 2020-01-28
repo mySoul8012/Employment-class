@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+</head>
+<body>
+<form action="#">
+    <select id="provinceId" style="width: 150px">
+        <option value="">-----请选择省-------</option>
+    </select>
+    <select id="cityId" style="width: 150px">
+        <option value="">-----请选择市----</option>
+    </select>
+</form>
+<script type="text/javascript">
+$(
+    () => {
+        // 获取省标签
+        let proinvceData = ["北京", "河北", "辽宁"];
+        let cityData = {"北京": ["顺义", "昌平", "朝阳"], "河北":["保定", "石家庄", "廊坊"], "辽宁":["沈阳", "铁岭", "抚顺"]};
+        // 获取省标签
+        let provinceObj = $("#provinceId");
+        // 进行添加
+        // 进行清空
+        provinceObj.html("");
+        for (let proinvceDatum of proinvceData) {
+            let tmp = `<option value="${proinvceDatum}">${proinvceDatum}</option>`;
+           provinceObj.html(provinceObj.html() + tmp);
+        }
+        //进行事件绑定
+        // 获取市
+        let cityId = $("#cityId");
+        $("#provinceId").change((obj) => {
+            console.log(obj.target.value);
+            // 获取数组
+            let tmp1 = cityData[obj.target.value];
+            // 清空
+            cityId.html("");
+            for(let tmp11 of tmp1){
+                let tmp22 = `<option value="${tmp11}">${tmp11}</option>`;
+                // 进行赋值
+                cityId.html(cityId.html() + tmp22);
+            }
+        })
+    }
+)
+</script>
+</body>
+</html>

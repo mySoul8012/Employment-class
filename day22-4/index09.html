@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    <style type="text/css">
+        .one{
+            background-color: red;
+        }
+        .two{
+            background-color: blue;
+        }
+        .over{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<table border="1px" width="200px" height="300px">
+    <tr>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+</table>
+<script type="text/javascript">
+    // 记录原来类名
+    let oldClassName;
+    $(
+        () => {
+            let trs = $("tr");
+            // 进行遍历
+            console.log(trs);
+            // 进行变色操作
+            for(let i = 0; i < trs.length ;i++){
+                // 进行判断
+                if(i % 2  == 0){
+                    // 为奇数，添加class
+                    console.log(trs[i]);
+                    $(trs[i]).addClass("one");
+                }
+                if(i % 2 == 1){
+                    $(trs[i]).addClass("two");
+                }
+            }
+        }
+    )
+</script>
+</body>
+</html>
