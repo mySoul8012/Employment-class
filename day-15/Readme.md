@@ -168,5 +168,3 @@ C. nameElement.getText()
 D. nameElement.getelementText()
 
 答案： C
-
-# 题目8
