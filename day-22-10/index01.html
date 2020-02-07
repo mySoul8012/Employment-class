@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    function ajax() {
+        $.ajax({
+            type: "get",
+            url: "data/json.txt",
+            dataType: "json",
+            async: true,
+            success: (data) => {
+                console.log("请求发送成功");
+                console.log(data);
+            }
+        })
+    }
+    ajax();
+</script>
+</body>
+</html>

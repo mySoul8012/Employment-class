@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.js"></script>
+
+</head>
+<body>
+<div>
+    <input type="text" name="world" onkeyup="searchWorld(this)">
+    <input type="button" value="搜索一下">
+    <div class="show" id="show">
+    </div>
+</div>
+<script type="text/javascript">
+    function searchWorld(obj) {
+        // 发送ajax
+        $.ajax({
+            type: "get",
+            url: "data/json.txt",
+            dataType: "json",
+            async: true,
+            success: (data) => {
+                // 清空原来的下拉内容
+                $("#show").empty();
+                $("#show").slideUp();
+                // 进行遍历内容
+                // 获取标志位
+                let flage = false;
+                // 进行遍历
+                for(let key of data){
+                    // 进行遍历
+                    if(key.startsWith(obj.value)){
+                        // 进行添加
+                        $("#show").append("<div>" + key + "</div>");
+                        // 标志位为true
+                        flage = true;
+                    }
+                }
+                // 进行判断，进行展示
+                if(flage){
+                    $("#show").slideDown();
+                }else{
+                    // 进行隐藏
+                    $("#show").slideUp();
+                }
+            }
+        })
+    }
+</script>
+</body>
+</html>
