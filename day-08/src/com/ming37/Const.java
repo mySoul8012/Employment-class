@@ -12,3 +12,4 @@ public class Const {
     // 线程安全，采用局部锁，性能更高
     public static ConcurrentHashMap<String, String> map2 = new ConcurrentHashMap<>();
 }
+
