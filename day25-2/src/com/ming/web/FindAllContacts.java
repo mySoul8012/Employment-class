@@ -26,6 +26,7 @@ public class FindAllContacts extends HttpServlet {
         req.setAttribute("contacts", contacts);
         // 进行页面跳转
         req.getRequestDispatcher("/WEB-INF/contacts.jsp").forward(req, resp);
+
     }
 
     @Override
