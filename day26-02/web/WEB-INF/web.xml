@@ -3,4 +3,31 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <servlet>
+        <servlet-name>Test01</servlet-name>
+        <servlet-class>com.ming.Test01</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Test01</servlet-name>
+        <url-pattern>/Test01</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>Test02</filter-name>
+        <filter-class>com.ming.Test02</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Test02</filter-name>
+        <url-pattern>/Test01</url-pattern>
+    </filter-mapping>
+
+
+    <filter>
+        <filter-name>Test03</filter-name>
+        <filter-class>com.ming.Test03</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Test03</filter-name>
+        <url-pattern>/Test01</url-pattern>
+    </filter-mapping>
 </web-app>
