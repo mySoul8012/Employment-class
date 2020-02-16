@@ -6,6 +6,9 @@ public class Student {
     private String sex;
     private String age;
 
+    public Student() {
+    }
+
     public Student(String id, String name, String sex, String age) {
         this.id = id;
         this.name = name;
@@ -43,5 +46,15 @@ public class Student {
 
     public void setAge(String age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", sex='" + sex + '\'' +
+                ", age='" + age + '\'' +
+                '}';
     }
 }
